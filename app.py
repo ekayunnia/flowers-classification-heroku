@@ -6,7 +6,7 @@ import cv2
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './static/uploads/'
-model = load_model('model_kesatu_weights.h5')
+model_saved = load_model('model_kesatu.h5')
 
 class_dict = {0: 'daisy', 1: 'dandelion', 2: 'rose', 3: 'sunflowers', 4: 'tulip'}
 
