@@ -17,7 +17,7 @@ def predict_label(img_path):
     q = []
     q.append(query)
     q = np.array(q, dtype='float') / 255.0
-    q_pred = model.predict(q)
+    q_pred = model_saved.predict(q)
     predicted_bit = int(q_pred)
     return class_dict[predicted_bit]
 
