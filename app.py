@@ -9,7 +9,6 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './static/uploads/'
 model = load_model('model_kesatu.h5')
 
-
 def predict_label(img_path):
     x = load_img(img_path, target_size=(250,250))
     x = img_to_array(x)
