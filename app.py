@@ -24,7 +24,7 @@ def predict_label(img_path):
     elif answer == 2:
 	    print("Label: rose")
     elif answer == 3:
-	    print("Label: sunflowers")
+	    print("Label: sunflower")
     elif answer == 4:
 	    print("Label: tulip")
     
@@ -45,7 +45,7 @@ def index():
             elif result == 2:
                 prediction = 'rose'
             elif result == 3:
-                prediction = 'sunflowers'
+                prediction = 'sunflower'
             elif result == 4:
                 prediction = 'tulip'
             return render_template('index.html', uploaded_image=image.filename, prediction=prediction)
