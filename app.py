@@ -3,7 +3,6 @@ from tensorflow.keras.models import load_model
 from keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
 import numpy as np
 import os
-import cv2
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './static/uploads/'
