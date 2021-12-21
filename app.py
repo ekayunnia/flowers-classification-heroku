@@ -3,12 +3,10 @@ from tensorflow.keras.models import load_model
 from keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
 import numpy as np
 import os
-import cv2
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './static/uploads/'
 model = load_model('model_kesatu.h5')
-
 
 def predict_label(img_path):
     x = load_img(img_path, target_size=(250,250))
@@ -24,7 +22,7 @@ def predict_label(img_path):
     elif answer == 2:
 	    print("Label: rose")
     elif answer == 3:
-	    print("Label: sunflowers")
+	    print("Label: sunflower")
     elif answer == 4:
 	    print("Label: tulip")
     
@@ -45,7 +43,7 @@ def index():
             elif result == 2:
                 prediction = 'rose'
             elif result == 3:
-                prediction = 'sunflowers'
+                prediction = 'sunflower'
             elif result == 4:
                 prediction = 'tulip'
             return render_template('index.html', uploaded_image=image.filename, prediction=prediction)
